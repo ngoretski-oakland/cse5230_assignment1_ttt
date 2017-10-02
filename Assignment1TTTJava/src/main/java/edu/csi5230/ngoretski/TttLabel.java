@@ -4,6 +4,12 @@ import java.awt.Label;
 import java.util.Observable;
 import java.util.Observer;
 
+/**
+ * An Observer label
+ * @author nathan
+ *
+ */
+@SuppressWarnings("serial")
 public class TttLabel extends Label implements Observer {
 
 	@Override

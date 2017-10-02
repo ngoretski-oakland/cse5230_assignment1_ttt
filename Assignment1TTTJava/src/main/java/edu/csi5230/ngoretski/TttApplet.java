@@ -4,15 +4,18 @@ import java.applet.Applet;
 import java.awt.Button;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
-import java.awt.Label;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
-import java.util.List;
 
 import javax.swing.JPanel;
 
-public class Main extends Applet {
+@SuppressWarnings("serial")
+/**
+ * Builds the ttt board graphically
+ * @author nathan
+ *
+ */
+public class TttApplet extends Applet {
 
 	JPanel topPanel = new JPanel();
 	JPanel boardPanel = new JPanel();
@@ -46,6 +49,7 @@ public class Main extends Applet {
 		for (int i = 0; i < 9; i++) {
 			TttButton button = new TttButton(i);
 
+			// attaches the observables to the buttons
 			tttGame.setButtonObserver(button, i);
 			
 			tttButton[i] = button;
@@ -75,4 +79,5 @@ public class Main extends Applet {
 		});
 		bottomPanel.add(startButton);
 	}
+
 }

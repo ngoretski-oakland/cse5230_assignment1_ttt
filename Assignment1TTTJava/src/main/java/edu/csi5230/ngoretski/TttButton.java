@@ -4,6 +4,10 @@ import java.awt.Button;
 import java.util.Observable;
 import java.util.Observer;
 
+/**
+ * An Observer button
+ * @author nathan
+ */
 @SuppressWarnings("serial")
 public class TttButton extends Button implements Observer {
 
